@@ -5,7 +5,7 @@
 *.tfstate
 *.tfstate.*
 
-.terraform
+.terraform*
 
 .DS_store
 
