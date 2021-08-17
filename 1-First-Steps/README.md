@@ -18,5 +18,3 @@
     ```
     S😎MESH~[1-First-Steps (main)]-$ terraform destroy
     ```
-
-
