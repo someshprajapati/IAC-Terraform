@@ -1,4 +1,4 @@
-## Variables in terraform 
+## Software provisioning in terraform 
 
 Before run the below steps, please create the `terraform.tfvars` file inside the directory and add the below 2 variables to conect to AWS account.
 ```
