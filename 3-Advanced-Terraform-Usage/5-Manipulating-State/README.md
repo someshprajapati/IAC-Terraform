@@ -170,18 +170,3 @@ aws_ssm_parameter.myparameter-new: Refreshing state... [id=/myapp/myparameter]
 
 Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 ```
-
-#### Terraform State Show
-```
-
-```
-
-#### Terraform State Show
-```
-
-```
-
-#### Terraform State Show
-```
-
-```
