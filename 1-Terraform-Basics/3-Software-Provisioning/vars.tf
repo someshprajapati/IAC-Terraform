@@ -11,9 +11,9 @@ variable "AWS_REGION" {
 variable "AMIS" {
   type = map(string)
   default = {
+    ap-south-1 = "ami-0a7cf821b91bcccbc"
     us-east-1 = "ami-13be557e"
     us-west-2 = "ami-06b94666"
-    ap-south-1 = "ami-0c1a7f89451184c8b"
   }
 }
 
@@ -28,4 +28,3 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
 }
-
