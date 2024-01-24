@@ -13,4 +13,4 @@
 .vscode/
 
 # Ignore the AWS secret file
-terraform.tfvars
+#terraform.tfvars
