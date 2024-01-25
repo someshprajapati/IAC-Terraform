@@ -20,7 +20,7 @@ variable "map1" {
 
 variable "AWS_REGION" {
   type    = string
-  default = "eu-west-1"
+  default = "ap-south-1"
 }
 
 variable "project_tags" {
@@ -30,5 +30,3 @@ variable "project_tags" {
     Environment = "Production"
   }
 }
-
-
