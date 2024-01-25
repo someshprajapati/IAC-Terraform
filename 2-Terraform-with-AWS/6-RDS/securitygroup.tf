@@ -41,4 +41,3 @@ resource "aws_security_group" "allow-mariadb" {
     Name = "allow-mariadb"
   }
 }
-
