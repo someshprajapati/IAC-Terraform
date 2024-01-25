@@ -14,4 +14,3 @@ resource "aws_instance" "example" {
   # role:
   iam_instance_profile = aws_iam_instance_profile.s3-mybucket-role-instanceprofile.name
 }
-

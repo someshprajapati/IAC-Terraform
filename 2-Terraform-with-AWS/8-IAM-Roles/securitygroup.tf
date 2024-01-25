@@ -19,4 +19,3 @@ resource "aws_security_group" "example-instance" {
     Name = "example-instance"
   }
 }
-
