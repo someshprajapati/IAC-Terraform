@@ -169,4 +169,72 @@ S😎MESH~[5-Manipulating-State (main)]-$ terraform apply
 aws_ssm_parameter.myparameter-new: Refreshing state... [id=/myapp/myparameter]
 
 Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform state rm aws_ssm_parameter.myparameter-new
+Removed aws_ssm_parameter.myparameter-new
+Successfully removed 1 resource instance(s).
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_ssm_parameter.myparameter-new will be created
+  + resource "aws_ssm_parameter" "myparameter-new" {
+      + arn            = (known after apply)
+      + data_type      = (known after apply)
+      + id             = (known after apply)
+      + insecure_value = (known after apply)
+      + key_id         = (known after apply)
+      + name           = "/myapp/myparameter"
+      + tags_all       = (known after apply)
+      + tier           = (known after apply)
+      + type           = "String"
+      + value          = (sensitive value)
+      + version        = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_ssm_parameter.myparameter-new: Creating...
+╷
+│ Error: creating SSM Parameter (/myapp/myparameter): ParameterAlreadyExists: The parameter already exists. To overwrite this value, set the overwrite option in the request to true.
+│
+│   with aws_ssm_parameter.myparameter-new,
+│   on ssm.tf line 1, in resource "aws_ssm_parameter" "myparameter-new":
+│    1: resource "aws_ssm_parameter" "myparameter-new" {
+
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform state list
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform import aws_ssm_parameter.myparameter-new /myapp/myparameter
+aws_ssm_parameter.myparameter-new: Importing from ID "/myapp/myparameter"...
+aws_ssm_parameter.myparameter-new: Import prepared!
+  Prepared aws_ssm_parameter for import
+aws_ssm_parameter.myparameter-new: Refreshing state... [id=/myapp/myparameter]
+Import successful!
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform state list
+aws_ssm_parameter.myparameter-new
+
+S😎MESH[5-Manipulating-State (main)]~$ terraform apply
+aws_ssm_parameter.myparameter-new: Refreshing state... [id=/myapp/myparameter]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 ```
