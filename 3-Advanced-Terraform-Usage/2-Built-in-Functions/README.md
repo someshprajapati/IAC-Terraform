@@ -81,12 +81,12 @@ subnet-1,subnet-2
 
 #### Map function in Terraform
 ```
-> map("eu-west-1", "ami-1", "us-east-1", "ami-2")
+> map("ap-south-1", "ami-1", "us-east-1", "ami-2")
 {
-  "eu-west-1" = "ami-1"
+  "ap-south-1" = "ami-1"
   "us-east-1" = "ami-2"
 }
 
-> lookup(map("eu-west-1", "ami-1", "us-east-1", "ami-2"), "us-east-1")
+> lookup(map("ap-south-1", "ami-1", "us-east-1", "ami-2"), "us-east-1")
 ami-2
 ```
