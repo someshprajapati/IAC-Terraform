@@ -2,7 +2,7 @@
 
 1. To initilize the terraform locally
     ```
-    S😎MESH~[Terraform-2021 (main)]-$ cd 1-First-Steps/
+    S😎MESH~[IAC-Terraform (main)]-$ cd 1-First-Steps/
     S😎MESH~[1-First-Steps (main)]-$ terraform init
     ```
 

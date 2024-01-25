@@ -2,7 +2,7 @@
 
 1. To get the terraform consul module locally
     ```
-    S😎MESH~[Terraform-2021 (main)]-$ cd 7-Modules/
+    S😎MESH~[IAC-Terraform (main)]-$ cd 7-Modules/
 
     S😎MESH~[7-Modules (main)]-$ terraform get
     Downloading github.com/wardviaene/terraform-consul-module.git?ref=terraform-0.12 for consul...

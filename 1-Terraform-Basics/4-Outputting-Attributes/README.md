@@ -8,7 +8,7 @@ AWS_SECRET_KEY = "KLda2uXYX"
 
 1. To initilize the terraform locally
     ```
-    S😎MESH~[Terraform-2021 (main)]-$ cd 4-Outputting-Attributes/
+    S😎MESH~[IAC-Terraform (main)]-$ cd 4-Outputting-Attributes/
     S😎MESH~[4-Outputting-Attributes (main)]-$ terraform init
     ```
 

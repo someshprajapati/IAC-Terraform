@@ -2,7 +2,7 @@
 
 1. To initilize the terraform locally
     ```
-    S😎MESH~[Terraform-2021 (main)]-$ cd 2-Variables/
+    S😎MESH~[IAC-Terraform (main)]-$ cd 2-Variables/
     S😎MESH~[2-Variables (main)]-$ terraform init
     ```
 
