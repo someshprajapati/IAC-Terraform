@@ -13,7 +13,7 @@ variable "VPC_ID" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "~/.ssh/id_rsa_personal.pub"
 }
 
 data "aws_ami" "ubuntu" {
@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
 
   filter {
@@ -78,6 +78,5 @@ resource "aws_security_group" "allow-ssh" {
 
 resource "aws_key_pair" "mykeypair" {
   key_name   = "mykeypair-${var.ENV}"
-  public_key = file("${path.root}/${var.PATH_TO_PUBLIC_KEY}")
+  public_key = file("${var.PATH_TO_PUBLIC_KEY}")
 }
-
