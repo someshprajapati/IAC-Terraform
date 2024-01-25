@@ -86,7 +86,7 @@ S😎MESH~[5-Manipulating-State (main)]-$ terraform state pull
           "schema_version": 0,
           "attributes": {
             "allowed_pattern": "",
-            "arn": "arn:aws:ssm:eu-west-1:289390057329:parameter/myapp/myparameter",
+            "arn": "arn:aws:ssm:ap-south-1:289390057329:parameter/myapp/myparameter",
             "data_type": "text",
             "description": "",
             "id": "/myapp/myparameter",
@@ -115,7 +115,7 @@ aws_ssm_parameter.myparameter
 S😎MESH~[5-Manipulating-State (main)]-$ terraform state show aws_ssm_parameter.myparameter
 # aws_ssm_parameter.myparameter:
 resource "aws_ssm_parameter" "myparameter" {
-    arn       = "arn:aws:ssm:eu-west-1:289390057329:parameter/myapp/myparameter"
+    arn       = "arn:aws:ssm:ap-south-1:289390057329:parameter/myapp/myparameter"
     data_type = "text"
     id        = "/myapp/myparameter"
     name      = "/myapp/myparameter"
